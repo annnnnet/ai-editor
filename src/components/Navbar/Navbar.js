@@ -4,7 +4,7 @@ import WbSunnyRoundedIcon from "@mui/icons-material/WbSunnyRounded";
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 import { ThemeContext } from "../../contexts/theme";
-import { projects, skills, contact, examples } from "../../portfolio";
+import { projects } from "../../portfolio";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -26,46 +26,11 @@ const Navbar = () => {
               onClick={toggleNavList}
               className="link link--nav"
             >
-              Menu
+              Edit
             </a>
           </li>
         ) : null}
 
-        {skills.length ? (
-          <li className="nav__list-item">
-            <a
-              href="#skills"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Settings
-            </a>
-          </li>
-        ) : null}
-
-        {contact.email ? (
-          <li className="nav__list-item">
-            <a
-              href="#contact"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              Contact
-            </a>
-          </li>
-        ) : null}
-
-        {examples.length ? (
-          <li className="nav__list-item">
-            <a
-              href="#examples"
-              onClick={toggleNavList}
-              className="link link--nav"
-            >
-              examples
-            </a>
-          </li>
-        ) : null}
       </ul>
 
       <button
