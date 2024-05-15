@@ -1,0 +1,32 @@
+.contact {
+  flex-direction: column;
+}
+
+.selected-image{
+  padding: 20px;
+}
+
+.selected-image img,
+.cropped-image img {
+  max-width: 100%;
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cropped-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cropped-image {
+  margin: 10px;
+  max-width: calc(33.33% - 20px);
+}
+
+@media (max-width: 768px) {
+  .cropped-image {
+    max-width: calc(50% - 20px);
+  }
+}

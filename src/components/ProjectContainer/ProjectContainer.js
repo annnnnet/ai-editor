@@ -3,7 +3,7 @@ import './ProjectContainer.css'
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 
 
-const ProjectContainer = ({ project }) => (
+const ProjectContainer = ({ project, onStartClick }) => (
   <div className='project'>
     <h3>{project.name}</h3>
 
@@ -16,6 +16,14 @@ const ProjectContainer = ({ project }) => (
           </li>
         ))}
       </ul>
+    )}
+
+    {project.start && (
+      <a onClick={onStartClick}>
+        <span type='button' className='btn btn--outline'>
+          Start
+        </span>
+      </a>
     )}
 
     {project.sourceCode && (
